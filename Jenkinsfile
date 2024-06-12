@@ -14,9 +14,9 @@ pipeline {
 
                 cleanWs() 
 
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs: 
+              
 
-                [[credentialsId: 'github-ssh-key', url: 'git@github.com:Perrine-lab/junit-automation.git']]] 
+                git branch: 'main', url: 'https://github.com/Perrine-lab/junit-automation.git' 
 
             } 
 
